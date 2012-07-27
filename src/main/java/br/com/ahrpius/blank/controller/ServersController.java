@@ -16,7 +16,7 @@ public class ServersController {
 	private final UserInfo userInfo;
 	private final ServerDao serverDao;
 
-	public ServersController(Result result, 	Validator validator, 
+	public ServersController(Result result, Validator validator, 
 			UserInfo userInfo, ServerDao serverDao) {
 		this.result = result;
 		this.validator = validator;
