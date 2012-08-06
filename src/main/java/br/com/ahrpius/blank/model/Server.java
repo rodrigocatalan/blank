@@ -64,6 +64,12 @@ public class Server {
 	public Long getId() {
 		return id;
 	}
+	//metodo privado pois não existe necessidade de setar o id
+	//o metodo só existe para que o vraptor injete o valor
+	@SuppressWarnings("unused")
+	private void setId(Long id) {
+		this.id = id;
+	}
 	public OperatingSystem getOperatingSystem() {
 		return operatingSystem;
 	}
