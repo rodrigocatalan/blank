@@ -1,4 +1,5 @@
 <%@ include file="../header.jsp"%>
+
 <c:forEach var="project" items="${projects}">
 	<section id="content" class="body">
 
@@ -10,6 +11,7 @@
 							<a href="<c:url value="/projects/"/><c:out value="${project.id}"/>"
 								rel="bookmark" title=""> ${project.name} </a>
 						</h2>
+						
 					</header>
 
 					<footer class="post-info">
@@ -38,15 +40,14 @@
 	<!-- /#content -->
 </c:forEach>
 <section id="content" class="body">
-
 	<ol id="posts-list" class="hfeed">
 		<li>
 			<form action="<c:url value="/projects"/>" method="post"
 				name="addProject">
 				<fieldset>
-					<label for="name">Nome:</label> <input type="text"
+					<label for="name">Nome:</label> <input type="text" size="50"
 						name="project.name" placeholder="Preencha com o nome do projeto" />
-					<label for="email">Descrição:</label> <input type="text"
+					<label for="email">Descrição:</label> <input type="text" size="50"
 						name="project.description"
 						placeholder="Preencha com a descrição do projeto" /> <br> <input
 						type="submit" value="Save" />
