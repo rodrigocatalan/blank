@@ -24,12 +24,6 @@
 					<p>${server.description}</p>
 					<p>${server.operatingSystem.description}</p>
 				</div>
-				xxxxx, asdfasd,as dfasdf asdfa
-				<div class="entry-content">
-					<p>teste</p>
-					<p>teste2</p>
-					<p>software</p>
-				</div>				
 				<!-- /.entry-content -->
 			</article>
 		</li>
