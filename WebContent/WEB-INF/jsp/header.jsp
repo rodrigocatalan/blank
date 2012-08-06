@@ -31,6 +31,7 @@
 			<ul>
 				<li><a href="<c:url value="/projects"/>">projetos</a></li>
 				<li><a href="<c:url value="/users"/>">usuários</a></li>
+				<li><a href="<c:url value="/operatingSystems"/>">O.S.'s</a></li>
 				<li><a href="<c:url value="/about"/>">sobre</a></li>
 			</ul>
 		</nav>

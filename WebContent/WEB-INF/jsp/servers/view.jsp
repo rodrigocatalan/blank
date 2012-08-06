@@ -25,23 +25,39 @@
 
 	<ol id="posts-list" class="hfeed">
 		<li>
-			<form action="<c:url value="/projects/${project.id}/servers"/>" 
-				method="post" name="addProject">
+			<form action="<c:url value="/servers/${server.id}/systemUsers"/>" 
+				method="post" name="addSystemUser">
 				<fieldset>
-					<label for="name">Nome:</label> 
-					<input type="text" name="server.name" 
-						placeholder="Preencha com o nome do servidor" />
-					<label for="email">Descrição:</label>
-					<input type="text" name="server.description" 
-						placeholder="Preencha com a descrição do servidor" />
-					<label for="ip">IP:</label>
-					<input type="text" name="server.ip"
-						 placeholder="Preencha com o ip do servidor" /> <br>
-					<input type="submit" value="Save" />
+					<label for="systemUser.user">Usuário:</label> 
+					<input type="text" name="systemUser.user" 
+						placeholder="Preencha com o usuário" />
+					<label for="systemUser.password">Senha:</label>
+					<input type="text" name="systemUser.password" 
+						placeholder="Preencha com a senha do usuário" />
+					<label for="systemUser.description">Descrição:</label>
+					<input type="text" name="systemUser.descriptio"
+						 placeholder="Preencha detalhes sobre o usuário" /> <br>
+					<input type="submit" value="Adicionar usuário" />
 				</fieldset>
 			</form> <!-- /.post-info -->
 		</li>
-
+		<li>
+			<form action="<c:url value="/servers/${server.id}/installedSoftwares"/>" 
+				method="post" name="addInstalledSoftware">
+				<fieldset>
+					<label for="systemUser.user">Usuário:</label> 
+					<input type="text" name="systemUser.user" 
+						placeholder="Preencha com o usuário" />
+					<label for="systemUser.password">Senha:</label>
+					<input type="text" name="systemUser.password" 
+						placeholder="Preencha com a senha do usuário" />
+					<label for="systemUser.description">Descrição:</label>
+					<input type="text" name="systemUser.descriptio"
+						 placeholder="Preencha detalhes sobre o usuário" /> <br>
+					<input type="submit" value="Adicionar software" />
+				</fieldset>
+			</form> <!-- /.post-info -->
+		</li>
 	</ol>
 	<!-- /#posts-list -->
 

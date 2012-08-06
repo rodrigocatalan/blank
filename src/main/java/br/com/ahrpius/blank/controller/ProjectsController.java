@@ -6,8 +6,10 @@ import static org.hamcrest.Matchers.is;
 import java.util.Calendar;
 import java.util.List;
 
+import br.com.ahrpius.blank.dao.OperatingSystemDao;
 import br.com.ahrpius.blank.dao.ProjectDao;
 import br.com.ahrpius.blank.interceptor.UserInfo;
+import br.com.ahrpius.blank.model.OperatingSystem;
 import br.com.ahrpius.blank.model.Project;
 import br.com.ahrpius.blank.model.Server;
 import br.com.caelum.vraptor.Get;
@@ -24,13 +26,16 @@ public class ProjectsController {
 	private final Validator validator;
 	private final ProjectDao projectDao;
 	private final UserInfo userInfo;
+	private final OperatingSystemDao osDao;
 	
 	public ProjectsController(Result result, Validator validator,
-			ProjectDao projectDao, UserInfo userInfo) {
+			ProjectDao projectDao, UserInfo userInfo,
+			OperatingSystemDao osDao) {
 		this.result = result;
 		this.validator = validator;
 		this.projectDao = projectDao;
 		this.userInfo = userInfo;
+		this.osDao = osDao;
 	}
 	
 	@Post("/projects")
@@ -63,6 +68,8 @@ public class ProjectsController {
 	
 	@Get("/projects/{project.id}")
 	public Project view(Project project) {
+		List<OperatingSystem> oss = osDao.listAll();
+		result.include("oss", oss);
 		return projectDao.find(project.getId());
 	}
 	
